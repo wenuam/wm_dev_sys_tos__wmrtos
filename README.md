@@ -7,6 +7,8 @@
 
 Clean-room multi-architecture reimplementation of 90s **Atari** **TOS** and **MultiTOS**, updated for current usage.
 
+**WMRTOS** : **WM** **R**eimplementation of **TOS** (no `rtos` capabilities)
+
 * Home
 
 https://github.com/wenuam/wm_dev_sys_tos__wmrtos
@@ -19,7 +21,7 @@ https://github.com/wenuam/wm_dev_sys_tos__wmrtos
 
 ## Purpose
 
-This operating system is aimed at embedded capable devices (200 MHz `CPU`, 32 MB `RAM`), with or without graphic interface.
+This operating system is aimed at embedded capable devices (200+ MHz `CPU`, 32+ MB `RAM`), with or without graphic interface.
 
 Its legacy comes from the original [Atari] [TOS] architecture circa 1985-1993. However adapted to nowadays technologies and protocols.
 
@@ -50,21 +52,21 @@ Just take a look by yourself (scroll left-right, up-down): https://eylenburg.git
 
 While many "branches" stalled and even disappeared, there are many more open now than previously. You may find the **Atari** **TOS** around the middle vertically, a short grey line spanning from 1985 to 1995.
 
-Its root comes from [Digital Research Inc] the then leader in operating system development and distribution. You may find the **DRI** [CP/M] around the first third vertically, a light blue tree spanning from 1974 to around 2005. Yet [DR-DOS] still have up-to-date descendants.
+Its root comes from [Digital Research Inc], the then leader in operating system development and distribution. You may find the **DRI** [CP/M] around the first third vertically, a light blue tree spanning from 1974 to around 2005. Yet [DR-DOS] still have up-to-date descendants.
 
 [Digital Research Inc]: https://en.wikipedia.org/wiki/Digital_Research
 [CP/M]: https://en.wikipedia.org/wiki/CP/M
 [DR-DOS]: https://en.wikipedia.org/wiki/DR-DOS
 
-While seemingly dead, many unlinked yet directly inspired operating systems are sharing common "DNA" with its original architecture. The general concepts of resource management and process creation remains about 90% the same despite the age difference.
+While seemingly dead, many unlinked, yet directly inspired operating systems, are sharing common "DNA" with its original architecture. The general concepts of resource management and process creation remains about 90% the same despite the age difference.
 
-Just like wheels haven't changed much through time.
+Just like wheels principles haven't changed much through time.
 
 For a more complete and in-depth analysis of the **TOS** you may follow the [atari-tos] link above.
 
 Thus **WMRTOS** basically resumes where **TOS** stopped around version 4.92 (1993 beta) and leaps forward restarting at version 5.00.
 
-Versions with fewer functionalities will have number lower than 5.00, following a very precise and detailed numbering scheme though, to avoid collisions.
+Versions with fewer functionalities will have number lower than 5.00, following a very precise and detailed numbering scheme though, to avoid confusion and numbering collisions.
 
 ## Features
 
@@ -78,18 +80,18 @@ This also prevent fragmenting the various `SDK` support like many short lived `C
 
 [S3C2440]: https://www.google.com/search?q=S3C2440
 
-The choice of **68000** over more recent `ISA` like [ARM] or [RISC-V] also takes into account the large documentation and knowledge base acquired through its wide spread usage in various computers, video game systems, industrial controllers, etc.
+The choice of **68000** over more recent `ISA` like [ARM] or [RISC-V] also takes into account the large documentation and knowledge base acquired through its widespread usage in various computers, video game systems, industrial controllers, etc.
 
 [ARM]: https://en.wikipedia.org/wiki/ARM_architecture_family
 [RISC-V]: https://en.wikipedia.org/wiki/RISC-V
 
-At one point the world turned [RISC] to "simplify" the compilers' development yet there never have been so many incompatible `CPU` declinations and extensions ([AVX], [Neon], etc) rendering the process completely pointless.
+At one point the world turned [RISC] to "simplify" the compilers' development yet there never have been so many incompatible `CPU` declinations and extensions ([AVX], [Neon], etc) rendering the process [completely pointless](https://xkcd.com/927/).
 
 [RISC]: https://en.wikipedia.org/wiki/Reduced_instruction_set_computer
 [AVX]: https://en.wikipedia.org/wiki/Advanced_Vector_Extensions
 [Neon]: https://www.arm.com/technologies/neon
 
-So a virtualization engine leverage the diverse `CPU` architectures to a range of updated **68000**-like `ISA`, preserving the original philosophy, yet still gaining access to recent features synthetically factored and simplified. But not censored "for the kids" though.
+So a "virtualization engine" leverage the diverse `CPU` architectures to a range of updated **68000**-like `ISA`, preserving the original philosophy, yet still gaining access to recent features synthetically factored and simplified. But not censored "for the kids" though...
 
 At first it started like a [fantasy] `CPU` evolution in an [alternative timeline], yet the idea grew into a more plausible approach to modern computing folding back to its root, like an ancient "black hole" growing when merging less capable or short lived system, becoming a multi-purpose behemoth.
 
